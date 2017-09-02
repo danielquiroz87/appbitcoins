@@ -1,0 +1,146 @@
+ <template name="search-home-page">
+
+<ul class="nav nav-tabs search-form-nav" role="tablist">
+  <li role="presentation" class="active"><a href="#orange_form_buy" class="tab-buy" aria-controls="orange_form_buy" role="tab" data-toggle="tab" aria-expanded="true">COMPRA RÁPIDA</a>
+  </li>
+  <li role="presentation" class="">
+    <a href="#orange_form_sell" class="tab-sell" aria-controls="orange_form_sell" role="tab" data-toggle="tab" aria-expanded="false">VENTA RÁPIDA</a>
+  </li>
+</ul>
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="orange_form_buy">
+    <form action="/instant-bitcoins/" class="search-form" method="post"> 
+      <input type="hidden" name="csrfmiddlewaretoken" value="YgEueiABtdezKrPnK7DpDSVUZu2cAevu">
+       <div class="search-form-fields"> 
+        <input id="id_action" name="action" type="hidden" value="buy"> 
+        <input id="id_lat" name="lat" type="hidden" value="6.2518"> 
+        <input id="id_lon" name="lon" type="hidden" value="-75.5636"> 
+        <input id="id_location_string" name="location_string" type="hidden" value="Medellín, Colombia"> 
+        <input id="id_country_code" name="country_code" type="hidden" value="CO"> 
+        <div id="div_id_amount" class="form-group">
+          <div class="controls "> 
+            <input class="search-form-amount textinput textInput form-control" id="id_amount" name="amount" placeholder="Cantidad" type="text"> </div> 
+          </div> 
+        <div id="div_id_currency" class="form-group"> 
+          <div class="controls "> 
+            <select class="search-form-currency select form-control" id="id_currency" name="currency">
+            <option value="COP" selected="selected">COP</option>
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+          </select> 
+        </div> 
+      </div> 
+      <div id="div_id_place_country" class="form-group" style="display: inline-block;"> <div class="controls "> 
+        <select class="search-form-place select form-control" id="search-form-place-country" name="place_country">
+          <option value="CO">Colombia</option>
+      </select> </div> 
+    </div> 
+  <div id="div_id_place" class="form-group" style="display: none;"> 
+    <div class="controls "> <input class="search-form-place textinput textInput form-control" id="search-form-place" name="place" placeholder="Medellín, Colombia" title="Escriba el nombre de su ciudad y después selecciónala de la lista" type="text"> 
+    </div>
+  </div> 
+  <div id="div_id_online_provider" class="form-group"> 
+    <div class="controls "> 
+  <select class="form-control" id="id_online_provider" name="online_provider">
+    <optgroup label="Popular en su país">
+    <option value="ASTROPAY">AstroPay</option>
+    <option value="CASH_BY_MAIL">Efectivo por correo</option>
+    <option value="CASH_DEPOSIT">Depósito en efectivo</option>
+    <option value="MONEYBOOKERS">Moneybookers / Skrill</option>
+    <option value="NATIONAL_BANK">Transferencia bancaria nacional</option>
+    <option value="NETELLER">Neteller</option>
+    <option value="OTHER">Otra forma de pago online</option>
+    <option value="PAYPAL">Paypal</option>
+    <option value="SPECIFIC_BANK">Transferencias con un banco específico</option><option value="WEBMONEY">WebMoney</option>
+    <option value="WU">Western Union</option>
+  </optgroup>
+  <optgroup label="Todos los métodos de pago">
+      <option value="ALL_ONLINE">Todas las ofertas online</option>
+      <option value="CASH_DEPOSIT">Depósito en efectivo</option>
+      <option value="CREDITCARD">Tarjeta de crédito</option>
+      <option value="MONEYGRAM">Moneygram</option>
+      <option value="NATIONAL_BANK">Transferencia bancaria nacional</option>
+      <option value="OTHER">Otra forma de pago online</option><option value="OTHER_REMITTANCE">Otra remesa</option>
+      <option value="PAYPAL">Paypal</option>
+      <option value="RIA">Transferencia de dinero RIA</option>
+      <option value="SPECIFIC_BANK">Transferencias con un banco específico</option><option value="WU">Western Union</option>
+  </optgroup>
+  <optgroup label="En persona">
+    <option value="CASH">Dinero en efectivo</option>
+  </optgroup>
+</select> 
+</div> 
+</div>
+<div class="form-group"> <div class="controls "> <input type="submit" name="find-offers" value="Buscar" class="btn btn-primary search-form-button" id="submit-id-find-offers"> </div>
+</div>
+
+</div>
+
+  <div class="form-group"> <div class="controls "> <input type="submit" name="find-offers" value="Buscar" class="btn btn-primary search-form-button search-form-button-advanced" id="submit-id-find-offers"> </div>
+  </div> 
+</form>
+
+</div>
+<div role="tabpanel" class="tab-pane" id="orange_form_sell">
+
+
+        <form action="/instant-bitcoins/" class="search-form" method="post"> <input type="hidden" name="csrfmiddlewaretoken" value="YgEueiABtdezKrPnK7DpDSVUZu2cAevu"> <div class="search-form-fields"> <input id="id_action" name="action" type="hidden" value="sell"> <input id="id_lat" name="lat" type="hidden" value="6.2518"> <input id="id_lon" name="lon" type="hidden" value="-75.5636"> <input id="id_location_string" name="location_string" type="hidden" value="Medellín, Colombia"> <input id="id_country_code" name="country_code" type="hidden" value="CO"> <div id="div_id_amount" class="form-group"> <div class="controls "> <input class="search-form-amount textinput textInput form-control" id="id_amount" name="amount" placeholder="Cantidad" type="text"> </div> </div> <div id="div_id_currency" class="form-group"> <div class="controls "> <select class="search-form-currency select form-control" id="id_currency" name="currency">
+          <option value="COP" selected="selected">COP</option>
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+        </select> </div> </div> <div id="div_id_place_country" class="form-group" style="display: inline-block;"> <div class="controls "> <select class="search-form-place select form-control" id="search-form-place-country" name="place_country">
+        <option value="CO">Colombia</option>
+      </select> 
+      </div> 
+      </div> 
+      <div id="div_id_place" class="form-group" style="display: none;"> 
+        <div class="controls "> 
+          <input class="search-form-place textinput textInput form-control" id="search-form-place" name="place" placeholder="Medellín, Colombia" title="Escriba el nombre de su ciudad y después selecciónala de la lista" type="text"> </div> 
+        </div> 
+        <div id="div_id_online_provider" class="form-group"> <div class="controls "> <select class="form-control" id="id_online_provider" name="online_provider">
+          <optgroup label="Popular en su país">
+            <option value="ASTROPAY">AstroPay</option>
+            <option value="CASH_BY_MAIL">Efectivo por correo</option>
+            <option value="CASH_DEPOSIT">Depósito en efectivo</option>
+            <option value="MONEYBOOKERS">Moneybookers / Skrill</option>
+            <option value="NATIONAL_BANK">Transferencia bancaria nacional</option>
+            <option value="NETELLER">Neteller</option>
+            <option value="OTHER">Otra forma de pago online</option>
+            <option value="PAYPAL">Paypal</option>
+            <option value="SPECIFIC_BANK">Transferencias con un banco específico</option>
+            <option value="WEBMONEY">WebMoney</option>
+            <option value="WU">Western Union</option>
+          </optgroup>
+          <optgroup label="Todos los métodos de pago">
+            <option value="ALL_ONLINE">Todas las ofertas online</option>
+            <option value="CASH_DEPOSIT">Depósito en efectivo</option>
+            <option value="CREDITCARD">Tarjeta de crédito</option>
+            <option value="INTERNATIONAL_WIRE_SWIFT">Transferencia internacional (SWIFT)</option>
+            <option value="MONEYBOOKERS">Moneybookers / Skrill</option>
+            <option value="NATIONAL_BANK">Transferencia bancaria nacional</option>
+            <option value="NETELLER">Neteller</option>
+            <option value="OTHER">Otra forma de pago online</option>
+            <option value="PAYEER">Payeer</option>
+            <option value="PAYONEER">Payoneer</option>
+            <option value="PAYPAL">Paypal</option>
+            <option value="PAYZA">Payza</option>
+            <option value="SPECIFIC_BANK">Transferencias con un banco específico</option><option value="WU">Western Union</option>
+          </optgroup>
+          <optgroup label="En persona">
+           <option value="CASH">Dinero en efectivo</option>
+         </optgroup>
+       </select> 
+      </div> 
+      </div> 
+      <div class="form-group"> 
+        <div class="controls "> <input type="submit" name="find-offers" value="Buscar" class="btn btn-primary search-form-button" id="submit-id-find-offers"> </div>
+      </div>
+
+      </div>
+
+      </form>
+
+  </div>
+</div>
+
+</template>
