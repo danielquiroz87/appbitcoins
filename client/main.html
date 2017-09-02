@@ -1,16 +1,257 @@
 <head>
-  <title>appbitcoins</title>
+  <title>Chage Bitcoins</title>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <nav class="navbar navbar-fixed-top navbar-default" id="navbar-site">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand site-logo-img" href="https://localbitcoins.com/es/"><img src="./LocalBitcoins.com_files/site-logo.47b58f6f66c6.png" class="img-responsive"></a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+             </button>
+      </div>
 
-  {{> hello}}
-  {{> info}}
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="trades-elements"><a href="https://localbitcoins.com/es/comprar_bitcoins">Comprar bitcoins</a></li>
+          <li class="trades-elements"><a href="https://localbitcoins.com/es/vender_bitcoins">Vender bitcoins</a></li>
+          <li class="trades-elements"><a href="https://localbitcoins.com/advertise/">Colgar anuncio de intercambio</a></li>
+
+          <li class="dropdown trades-dropdown" id="trades-ddl">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="https://localbitcoins.com/es/#trades-ddl">
+            Operaciones de compra y venta
+            <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="https://localbitcoins.com/es/comprar_bitcoins">Comprar bitcoins</a></li>
+                <li><a href="https://localbitcoins.com/es/vender_bitcoins">Vender bitcoins</a></li>
+                <li><a href="https://localbitcoins.com/advertise/">Colgar anuncio de intercambio</a></li>
+            </ul>
+          </li>
+          <li><a href="https://localbitcoins.com/forums/">Foros</a></li>
+          <!-- Info dropdown -->
+          <li class="dropdown">
+            <a href="https://localbitcoins.com/es/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ayuda</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="https://localbitcoins.com/guides/how-to-buy-bitcoins">Cómo comprar bitcoins</a></li>
+              <li><a href="https://localbitcoins.com/faq">Preguntas frecuentes</a></li>
+              <li><a href="https://localbitcoins.com/guides/">Guías</a></li>
+              <li><a href="https://localbitcoins.com/support/">Póngase en contacto con nuestro soporte</a></li>
+              <li><a href="https://localbitcoins.com/blog/">Blog</a></li>
+              <li><a href="https://localbitcoins.com/fees">Honorarios</a></li>
+              <li><a href="https://localbitcoins.com/about">Sobre nosotros</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Right side of navbar -->
+        
+          
+          <ul class="nav navbar-nav navbar-right">
+          <li><a id="top-register-link" class="register-link" href="https://localbitcoins.com/register/"><span><i class="fa fa-check-square-o"></i>
+          
+          Registro
+          
+          </span></a></li>
+          <li> <a id="top-login-link" href="https://localbitcoins.com/accounts/login/"><i class="fa fa-user"></i>
+          iniciar sesión
+          </a></li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+  
+<div class="container">
+
+  <!-- Intro well -->
+  <div class="well" >
+  <div class="row">
+    <div class="col-md-12 just-centered">
+      <h1 class="bold-text">Compre y venda bitcoins cerca de usted</h1>
+      <h2 class="tagline">Instantáneo. Seguro. Privado.</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 just-centered">
+      <div>
+        <p class="tagline lead">
+          
+          Comerciar con bitcoins en
+          <a href="https://localbitcoins.com/statistics">15150 ciudades</a> y
+          <a href="https://localbitcoins.com/statistics">248 países</a>
+          
+          incluyendo
+          <a href="https://localbitcoins.com/country/CO">Colombia</a>.
+          
+        </p>
+      </div>
+        <a id="splash-register-link" class="register-link btn btn-success btn-lg" href="https://localbitcoins.com/register/">
+          <i class="fa fa-check-square-o"></i>&nbsp;Registro
+        </a>
+    </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+    
+
+    <div class="search-form-wrap">
+      
+      <ul class="nav nav-tabs search-form-nav" role="tablist">
+        <li role="presentation" class="active"><a href="#orange_form_buy" class="tab-buy" aria-controls="orange_form_buy" role="tab" data-toggle="tab" aria-expanded="true">COMPRA RÁPIDA</a></li>
+        <li role="presentation" class=""><a href="#orange_form_sell" class="tab-sell" aria-controls="orange_form_sell" role="tab" data-toggle="tab" aria-expanded="false">VENTA RÁPIDA</a></li>
+      </ul>
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="orange_form_buy">
+            
+
+<form action="/instant-bitcoins/" class="search-form" method="post"> <input type="hidden" name="csrfmiddlewaretoken" value="YgEueiABtdezKrPnK7DpDSVUZu2cAevu"> <div class="search-form-fields"> <input id="id_action" name="action" type="hidden" value="buy"> <input id="id_lat" name="lat" type="hidden" value="6.2518"> <input id="id_lon" name="lon" type="hidden" value="-75.5636"> <input id="id_location_string" name="location_string" type="hidden" value="Medellín, Colombia"> <input id="id_country_code" name="country_code" type="hidden" value="CO"> <div id="div_id_amount" class="form-group"> <div class="controls "> <input class="search-form-amount textinput textInput form-control" id="id_amount" name="amount" placeholder="Cantidad" type="text"> </div> </div> <div id="div_id_currency" class="form-group"> <div class="controls "> <select class="search-form-currency select form-control" id="id_currency" name="currency">
+<option value="COP" selected="selected">COP</option>
+<option value="EUR">EUR</option>
+<option value="USD">USD</option>
+</select> </div> </div> <div id="div_id_place_country" class="form-group" style="display: inline-block;"> <div class="controls "> <select class="search-form-place select form-control" id="search-form-place-country" name="place_country">
+<option value="CO">Colombia</option>
+</select> </div> </div> <div id="div_id_place" class="form-group" style="display: none;"> <div class="controls "> <input class="search-form-place textinput textInput form-control" id="search-form-place" name="place" placeholder="Medellín, Colombia" title="Escriba el nombre de su ciudad y después selecciónala de la lista" type="text"> </div> </div> <div id="div_id_online_provider" class="form-group"> <div class="controls "> <select class="form-control" id="id_online_provider" name="online_provider"><optgroup label="Popular en su país">
+<option value="ASTROPAY">AstroPay</option>
+<option value="CASH_BY_MAIL">Efectivo por correo</option>
+<option value="CASH_DEPOSIT">Depósito en efectivo</option>
+<option value="MONEYBOOKERS">Moneybookers / Skrill</option>
+<option value="NATIONAL_BANK">Transferencia bancaria nacional</option>
+<option value="NETELLER">Neteller</option>
+<option value="OTHER">Otra forma de pago online</option>
+<option value="PAYPAL">Paypal</option>
+<option value="SPECIFIC_BANK">Transferencias con un banco específico</option><option value="WEBMONEY">WebMoney</option>
+<option value="WU">Western Union</option>
+</optgroup><optgroup label="Todos los métodos de pago">
+<option value="ALL_ONLINE">Todas las ofertas online</option>
+<option value="CASH_DEPOSIT">Depósito en efectivo</option>
+<option value="CREDITCARD">Tarjeta de crédito</option>
+<option value="MONEYGRAM">Moneygram</option>
+<option value="NATIONAL_BANK">Transferencia bancaria nacional</option>
+<option value="OTHER">Otra forma de pago online</option><option value="OTHER_REMITTANCE">Otra remesa</option>
+<option value="PAYPAL">Paypal</option>
+<option value="RIA">Transferencia de dinero RIA</option>
+<option value="SPECIFIC_BANK">Transferencias con un banco específico</option><option value="WU">Western Union</option>
+</optgroup>
+<optgroup label="En persona">
+<option value="CASH">Dinero en efectivo</option>
+</optgroup>
+</select> 
+</div> 
+</div>
+<div class="form-group"> <div class="controls "> <input type="submit" name="find-offers" value="Buscar" class="btn btn-primary search-form-button" id="submit-id-find-offers"> </div>
+</div>
+
+</div>
+<div class="search-form-checkboxes"> <div class="search-form-sms-not-required checkbox-inline"> <div class="form-group"> <div id="div_id_sms_not_required" class="checkbox"> <div class="controls "> <input class="checkboxinput" id="id_sms_not_required" name="sms_not_required" type="checkbox"> <p id="hint_id_sms_not_required" class="help-block">No se requiere SMS</p> </div> </div> </div> </div>
+<div class="search-form-id-not-required checkbox-inline"> <div class="form-group"> <div id="div_id_id_not_required" class="checkbox"> <div class="controls "> <input class="checkboxinput" id="id_id_not_required" name="id_not_required" type="checkbox"> <p id="hint_id_id_not_required" class="help-block">No se requiere identificador</p> </div> </div> </div> </div>
+
+</div>
+<div class="form-group"> <div class="controls "> <input type="submit" name="find-offers" value="Buscar" class="btn btn-primary search-form-button search-form-button-advanced" id="submit-id-find-offers"> </div>
+</div> </form>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="orange_form_sell">
+            
+
+<form action="/instant-bitcoins/" class="search-form" method="post"> <input type="hidden" name="csrfmiddlewaretoken" value="YgEueiABtdezKrPnK7DpDSVUZu2cAevu"> <div class="search-form-fields"> <input id="id_action" name="action" type="hidden" value="sell"> <input id="id_lat" name="lat" type="hidden" value="6.2518"> <input id="id_lon" name="lon" type="hidden" value="-75.5636"> <input id="id_location_string" name="location_string" type="hidden" value="Medellín, Colombia"> <input id="id_country_code" name="country_code" type="hidden" value="CO"> <div id="div_id_amount" class="form-group"> <div class="controls "> <input class="search-form-amount textinput textInput form-control" id="id_amount" name="amount" placeholder="Cantidad" type="text"> </div> </div> <div id="div_id_currency" class="form-group"> <div class="controls "> <select class="search-form-currency select form-control" id="id_currency" name="currency">
+<option value="COP" selected="selected">COP</option>
+<option value="EUR">EUR</option>
+<option value="USD">USD</option>
+</select> </div> </div> <div id="div_id_place_country" class="form-group" style="display: inline-block;"> <div class="controls "> <select class="search-form-place select form-control" id="search-form-place-country" name="place_country">
+<option value="CO">Colombia</option>
+</select> 
+</div> 
+</div> 
+<div id="div_id_place" class="form-group" style="display: none;"> 
+  <div class="controls "> 
+    <input class="search-form-place textinput textInput form-control" id="search-form-place" name="place" placeholder="Medellín, Colombia" title="Escriba el nombre de su ciudad y después selecciónala de la lista" type="text"> </div> 
+  </div> 
+  <div id="div_id_online_provider" class="form-group"> <div class="controls "> <select class="form-control" id="id_online_provider" name="online_provider">
+    <optgroup label="Popular en su país">
+      <option value="ASTROPAY">AstroPay</option>
+      <option value="CASH_BY_MAIL">Efectivo por correo</option>
+      <option value="CASH_DEPOSIT">Depósito en efectivo</option>
+      <option value="MONEYBOOKERS">Moneybookers / Skrill</option>
+      <option value="NATIONAL_BANK">Transferencia bancaria nacional</option>
+      <option value="NETELLER">Neteller</option>
+      <option value="OTHER">Otra forma de pago online</option>
+      <option value="PAYPAL">Paypal</option>
+      <option value="SPECIFIC_BANK">Transferencias con un banco específico</option>
+      <option value="WEBMONEY">WebMoney</option>
+      <option value="WU">Western Union</option>
+      </optgroup>
+      <optgroup label="Todos los métodos de pago">
+      <option value="ALL_ONLINE">Todas las ofertas online</option>
+      <option value="CASH_DEPOSIT">Depósito en efectivo</option>
+      <option value="CREDITCARD">Tarjeta de crédito</option>
+      <option value="INTERNATIONAL_WIRE_SWIFT">Transferencia internacional (SWIFT)</option>
+      <option value="MONEYBOOKERS">Moneybookers / Skrill</option>
+      <option value="NATIONAL_BANK">Transferencia bancaria nacional</option>
+      <option value="NETELLER">Neteller</option>
+      <option value="OTHER">Otra forma de pago online</option>
+      <option value="PAYEER">Payeer</option>
+      <option value="PAYONEER">Payoneer</option>
+      <option value="PAYPAL">Paypal</option>
+      <option value="PAYZA">Payza</option>
+      <option value="SPECIFIC_BANK">Transferencias con un banco específico</option><option value="WU">Western Union</option>
+     </optgroup>
+     <optgroup label="En persona">
+     <option value="CASH">Dinero en efectivo</option>
+      </optgroup>
+    </select> 
+  </div> 
+</div> 
+<div class="form-group"> 
+  <div class="controls "> <input type="submit" name="find-offers" value="Buscar" class="btn btn-primary search-form-button" id="submit-id-find-offers"> </div>
+</div>
+
+</div>
+<div class="search-form-checkboxes"> <div class="search-form-sms-not-required checkbox-inline"> <div class="form-group"> <div id="div_id_sms_not_required" class="checkbox"> <div class="controls "> <input class="checkboxinput" id="id_sms_not_required" name="sms_not_required" type="checkbox"> <p id="hint_id_sms_not_required" class="help-block">No se requiere SMS</p> </div> </div> </div> </div>
+<div class="search-form-id-not-required checkbox-inline"> <div class="form-group"> <div id="div_id_id_not_required" class="checkbox"> <div class="controls "> <input class="checkboxinput" id="id_id_not_required" name="id_not_required" type="checkbox"> <p id="hint_id_id_not_required" class="help-block">No se requiere identificador</p> </div> </div> </div> </div>
+
+</div>
+<div class="form-group"> <div class="controls "> <input type="submit" name="find-offers" value="Buscar" class="btn btn-primary search-form-button search-form-button-advanced" id="submit-id-find-offers"> </div>
+</div> </form>
+
+        </div>
+      </div>
+
+    </div>
+
+<script>
+    window.quickForm = {
+        currencyData: {"BD": "BDT", "BE": "EUR", "BF": "XOF", "BG": "BGN", "BA": "BAM", "BB": "BBD", "WF": "XPF", "BL": "EUR", "BM": "BMD", "BN": "BND", "BO": "BOB", "BH": "BHD", "BI": "BIF", "BJ": "XOF", "BT": "INR", "JM": "JMD", "BV": "NOK", "BW": "BWP", "WS": "WST", "BQ": "USD", "BR": "BRL", "BS": "BSD", "JE": "GBP", "BY": "BYN", "BZ": "BZD", "RU": "RUB", "RW": "RWF", "RS": "RSD", "TL": "USD", "RE": "EUR", "TM": "TMT", "TJ": "TJS", "RO": "RON", "TK": "NZD", "GW": "XOF", "GU": "USD", "GT": "GTQ", "GS": "GBP", "GR": "EUR", "GQ": "XAF", "GP": "EUR", "JP": "JPY", "GY": "GYD", "GG": "GBP", "GF": "EUR", "GE": "GEL", "GD": "XCD", "GB": "GBP", "GA": "XAF", "SV": "USD", "GN": "GNF", "GM": "GMD", "GL": "DKK", "GI": "GIP", "GH": "GHS", "OM": "OMR", "TN": "TND", "JO": "JOD", "HR": "HRK", "HT": "HTG", "HU": "HUF", "HK": "HKD", "HN": "HNL", "HM": "AUD", "VE": "VEF", "PR": "USD", "PS": "ILS", "PW": "USD", "PT": "EUR", "SJ": "NOK", "PY": "PYG", "IQ": "IQD", "PA": "PAB", "PF": "XPF", "PG": "PGK", "PE": "PEN", "PK": "PKR", "PH": "PHP", "PN": "NZD", "PL": "PLN", "PM": "EUR", "ZM": "ZMW", "EH": "MAD", "EE": "EUR", "EG": "EGP", "ZA": "ZAR", "EC": "USD", "IT": "EUR", "VN": "VND", "SB": "SBD", "ET": "ETB", "SO": "SOS", "ZW": "USD", "SA": "SAR", "ES": "EUR", "ER": "ERN", "ME": "EUR", "MD": "MDL", "MG": "MGA", "MF": "EUR", "MA": "MAD", "MC": "EUR", "UZ": "UZS", "MM": "MMK", "ML": "XOF", "MO": "MOP", "MN": "MNT", "MH": "USD", "MK": "MKD", "MU": "MUR", "MT": "EUR", "MW": "MWK", "MV": "MVR", "MQ": "EUR", "MP": "USD", "MS": "XCD", "MR": "MRO", "IM": "GBP", "UG": "UGX", "TZ": "TZS", "MY": "MYR", "MX": "MXN", "IL": "ILS", "FR": "EUR", "IO": "USD", "SH": "SHP", "FI": "EUR", "FJ": "FJD", "FK": "FKP", "FM": "USD", "FO": "DKK", "NI": "NIO", "NL": "EUR", "NO": "NOK", "NA": "ZAR", "VU": "VUV", "NC": "XPF", "NE": "XOF", "NF": "AUD", "NG": "NGN", "NZ": "NZD", "NP": "NPR", "NR": "AUD", "NU": "NZD", "CK": "NZD", "CI": "XOF", "CH": "CHF", "CO": "COP", "CN": "CNY", "CM": "XAF", "CL": "CLP", "CC": "AUD", "CA": "CAD", "CG": "XAF", "CF": "XAF", "CD": "CDF", "CZ": "CZK", "CY": "EUR", "CX": "AUD", "CR": "CRC", "CW": "ANG", "CV": "CVE", "CU": "CUP", "SZ": "SZL", "SY": "SYP", "SX": "ANG", "KG": "KGS", "KE": "KES", "SS": "SSP", "SR": "SRD", "KI": "AUD", "KH": "KHR", "KN": "XCD", "KM": "KMF", "ST": "STD", "SK": "EUR", "KR": "KRW", "SI": "EUR", "KP": "KPW", "KW": "KWD", "SN": "XOF", "SM": "EUR", "SL": "SLL", "SC": "SCR", "KZ": "KZT", "KY": "KYD", "SG": "SGD", "SE": "SEK", "SD": "SDG", "DO": "DOP", "DM": "XCD", "DJ": "DJF", "DK": "DKK", "VG": "USD", "DE": "EUR", "YE": "YER", "DZ": "DZD", "US": "USD", "UY": "UYU", "YT": "EUR", "UM": "USD", "LB": "LBP", "LC": "XCD", "LA": "LAK", "TV": "AUD", "TW": "TWD", "TT": "TTD", "TR": "TRY", "LK": "LKR", "LI": "CHF", "LV": "EUR", "TO": "TOP", "LT": "EUR", "LU": "EUR", "LR": "LRD", "LS": "ZAR", "TH": "THB", "TF": "EUR", "TG": "XOF", "TD": "XAF", "TC": "USD", "LY": "LYD", "VA": "EUR", "VC": "XCD", "AE": "AED", "AD": "EUR", "AG": "XCD", "AF": "AFN", "AI": "XCD", "VI": "USD", "IS": "ISK", "IR": "IRR", "AM": "AMD", "AL": "ALL", "AO": "AOA", "AQ": "USD", "AS": "USD", "AR": "ARS", "AU": "AUD", "AT": "EUR", "AW": "AWG", "IN": "INR", "AX": "EUR", "AZ": "AZN", "IE": "EUR", "ID": "IDR", "UA": "UAH", "QA": "QAR", "MZ": "MZN"},
+        paymentMethodData: {"GOOGLEWALLET": {"homepage": "https://wallet.google.com/", "description": "M\u00e9todo de pago online para transferir fondos entre dos usuarios de Google Wallet.", "name": "Google Wallet"}, "MOBILEPAY_DANSKE_BANK": {"national": false, "homepage": "https://www.danskebank.fi/mobilepay", "description": "Manera sencilla de enviar dinero con n\u00fameros de tel\u00e9fono, funciona con todos los bancos fineses.", "name": "MobilePay FI"}, "VANILLA": {"homepage": "https://perfectmoney.com/", "description": "Cupones canjeables y tarjetas de d\u00e9bito.", "name": "Vanilla"}, "TRANSFERWISE": {"homepage": "http://transferwise.com/", "name": "Transferwise", "description": "Transferir dinero online internacionalmente"}, "OTHER_ONLINE_WALLET": {"national": true, "description": "Otras carteras online internacionales no tienen su propia categor\u00eda. El anunciante ofrece los detalles de pago en la descripci\u00f3n del anuncio.", "name": "Otra cartera online"}, "WU": {"homepage": "http://www.westernunion.com/", "description": "Env\u00ede y reciba dinero internacionalmente. El receptor puede canjear la transferencia por efectivo.", "name": "Western Union"}, "OTHER_ONLINE_WALLET_GLOBAL": {"national": false, "description": "Las carteras online internacionales no tienen su propia categor\u00eda. El anunciante ofrece los detalles de pago en la descripci\u00f3n del anuncio", "name": "Otra cartera online (global)"}, "ASTROPAY": {"homepage": "http://www.astropaycard.com/", "name": "AstroPay", "description": "AstroPay Card es un medio sencillo y seguro de realizar pagos en l\u00ednea en los pa\u00edses latinoamericanos."}, "GIFT_CARD_CODE_AMAZON": {"national": true, "description": "Un c\u00f3digo de tarjeta regalo.", "name": "C\u00f3digo de la tarjeta regalo de Amazon"}, "BANK_TRANSFER_IMPS": {"homepage": "http://www.npci.org.in/bankmember.aspx/", "description": "Transferencias bancarias IMPS en la India.", "name": "Transferencia bancaria IMPS India"}, "SUPERFLASH": {"national": false, "homepage": "http://www.intesasanpaolo.com/", "name": "Superflash", "description": "Tarjeta de d\u00e9bito italiana con un n\u00famero IBAN."}, "GIFT_CARD_CODE_GLOBAL": {"description": "Un c\u00f3digo de tarjeta regalo.", "name": "C\u00f3digo de tarjeta de regalo (global)"}, "SEPA": {"homepage": "http://en.wikipedia.org/wiki/Single_Euro_Payments_Area", "name": "Transferencia SEPA (EU)", "description": "Transferencias bancarias, Zona \u00danica de Pagos en Euros (SEPA). Normalmente revocables por hasta 10 d\u00edas."}, "PAYPALMYCASH": {"homepage": "https://www.paypal-cash.com/", "description": "Cupones que pueden usarse para recargar su cuenta de PayPal.", "name": "PayPal My Cash"}, "MONEYGRAM": {"homepage": "https://www.moneygram.com/", "description": "Env\u00ede y reciba dinero internacionalmente. El receptor puede canjear la transferencia por efectivo.", "name": "Moneygram"}, "RIA": {"homepage": "https://www.riamoneytransfer.com/", "description": "Env\u00ede y reciba dinero internacionalmente. El receptor puede canjear la transferencia por efectivo.", "name": "Transferencia de dinero RIA"}, "PINGIT": {"homepage": "http://www.fasterpayments.org.uk/", "description": "Pagos m\u00f3viles Barclays en el Reino Unido.", "name": "Pingit"}, "SOLIDTRUSTPAY": {"national": false, "homepage": "https://www.moneygram.com/", "description": "Procesador de pago instant\u00e1neo internacional. M\u00faltiples opciones de financiaci\u00f3n.", "name": "SolidTrustPay"}, "XOOM": {"homepage": "https://www.xoom.com/", "description": "Xoom Corporation es una compa\u00f1\u00eda de transferencia de dinero electr\u00f3nico ubicada en San Francisco. Proporciona servicios de pago al consumidor para Europa, Canad\u00e1, Australia, Latinoam\u00e9rica, Filipinas e India.", "name": "Xoom"}, "MOBILEPAY_DANSKE_BANK_DK": {"national": false, "homepage": "http://www.mobilepay.dk/", "description": "Una forma sencilla de enviar dinero con n\u00fameros de tel\u00e9fono, funciona con todos los bancos daneses.", "name": "MobilePay"}, "GIFT_CARD_CODE": {"national": true, "description": "Un c\u00f3digo de tarjeta regalo.", "name": "C\u00f3digo de la tarjeta de regalo"}, "TELEGRAMATIC_ORDER": {"name": "Giro por telegrama", "description": "Forma de pago en Croacia"}, "ALL_ONLINE": {"name": "Todas las ofertas online"}, "VIPPS": {"national": false, "homepage": "https://www.vipps.no/", "description": "Env\u00ede dinero a otro tel\u00e9fono m\u00f3vil noruego.", "name": "Vipps"}, "PostePay": {"homepage": "http://www.postepay.it/", "description": "Pagos online italianos.", "name": "PostePay"}, "NETELLER": {"homepage": "https://www.neteller.com/", "description": "Dep\u00f3sitos, retiros y pagos instant\u00e1neos online.", "name": "Neteller"}, "PAYEER": {"homepage": "https://payeer.com/", "name": "Payeer", "description": "Enviar dinero a cualquier persona en el mundo, el receptor no necesita estar registrado."}, "CASH_BY_MAIL": {"national": true, "description": "Env\u00ede efectivo al receptor mediante correo electr\u00f3nico.", "name": "Efectivo por correo"}, "PYC": {"homepage": "http://personal.natwest.com/personal/ways-to-bank-with-us/pay-your-contacts.html", "description": "Pague a sus contactos: pagos m\u00f3viles a trav\u00e9s de Natwest / Royal Bank of Scotland", "name": "PYC"}, "ALIPAY": {"national": false, "homepage": "http://global.alipay.com/", "description": "Alipay es un sistema de pago online l\u00edder en China.", "name": "Alipay"}, "NATIONAL_BANK": {"national": true, "description": "Transferencia bancaria dentro de un pa\u00eds espec\u00edfico", "name": "Transferencia bancaria nacional"}, "PAYTM": {"homepage": "https://paytm.com/", "description": "M\u00e9todo de pago m\u00f3vil indio (pago a trav\u00e9s del m\u00f3vil).", "name": "PayTM"}, "VENMO": {"homepage": "https://venmo.com/", "description": "Env\u00ede dinero a sus amigos usando una aplicaci\u00f3n de m\u00f3vil en EE. UU. Pueden cubrirse los fondos usando una tarjeta de cr\u00e9dito.", "name": "Venmo"}, "CASH_DEPOSIT": {"national": true, "description": "Ir a un banco o cajero y hacer un dep\u00f3sito en efectivo directamente a la cuenta bancaria", "name": "Dep\u00f3sito en efectivo"}, "ADVCASH": {"homepage": "https://www.advcash.com", "name": "advcash", "description": "Advanced Cash es un servicio de carteras electr\u00f3nicas que permite enviar y recibir dinero."}, "QIWI": {"national": false, "homepage": "https://qiwi.ru/", "description": "Enviar dinero a cualquiera con una cuenta Qiwi. Todo lo que debe saber es su n\u00famero de tel\u00e9fono, simple, f\u00e1cil y r\u00e1pido.", "name": "QIWI"}, "DWOLLA": {"homepage": "https://www.dwolla.com/", "description": "Env\u00ede dinero en l\u00ednea usando Dwolla.", "name": "Dwolla"}, "GIFT_CARD_CODE_APPLE_STORE": {"national": true, "description": "Un c\u00f3digo de tarjeta regalo.", "name": "C\u00f3digo de la tarjeta regalo de Apple Store"}, "NETSPEND": {"homepage": "https://www.netspend.com/", "description": "Cup\u00f3n canjeable para tarjeta NetSpend", "name": "Pack de recarga NetSpend"}, "MONEYBOOKERS": {"homepage": "https://www.skrill.com/", "description": "La forma simple y segura de enviar y recibir dinero.", "name": "Moneybookers / Skrill"}, "HYPERWALLET": {"homepage": "http://www.hyperwallet.com/", "description": "hyperWALLET es una soluci\u00f3n de pago online que ofrece financiaci\u00f3n con transferencias bancarias instant\u00e1neas en Canad\u00e1.", "name": "hyperWALLET"}, "POSTAL_ORDER": {"homepage": "https://en.wikipedia.org/wiki/Postal_Order", "description": "Enviar dinero por correo en el Reino Unido y los Estados Unidos.", "name": "Giro postal"}, "PAYM": {"homepage": "http://www.paym.co.uk/", "description": "Pague a sus amigos y familiares usando solo su n\u00famero de m\u00f3vil.", "name": "Paym"}, "GIFT_CARD_CODE_STEAM": {"national": false, "description": "Un c\u00f3digo de tarjeta regalo.", "name": "C\u00f3digo de la tarjeta regalo de Steam"}, "INTERNATIONAL_WIRE_SWIFT": {"homepage": "http://en.wikipedia.org/wiki/Society_for_Worldwide_Interbank_Financial_Telecommunication", "description": "Transferencia bancaria internacional por c\u00f3digo SWIFT", "name": "Transferencia internacional (SWIFT)"}, "MOBILEPAY_DANSKE_BANK_NO": {"national": false, "homepage": "www.danskebank.no/nb-no/mobilepay", "description": "Una forma sencilla de enviar dinero con n\u00fameros de tel\u00e9fono, funciona con todos los bancos noruegos.", "name": "MobilePay NO"}, "GIFT_CARD_CODE_ITUNES": {"national": true, "description": "Un c\u00f3digo de tarjeta regalo.", "name": "C\u00f3digo de tarjeta regalo de iTunes"}, "TIGOPESA_TANZANIA": {"homepage": "http://www.tigo.co.tz/tigo-pesa", "name": "Tigo-Pesa Tanzania", "description": "Env\u00ede y reciba dinero con su tel\u00e9fono m\u00f3vil en \u00c1frica."}, "CHASE_QUICKPAY": {"homepage": "https://www.chase.com/online-banking/quickpay", "description": "Pagos de persona a persona mediante el sistema Chase Quickpay.", "name": "Chase Quickpay"}, "PAYZA": {"homepage": "https://www.payza.com/", "name": "Payza", "description": "Env\u00ede y reciba dinero online. A\u00f1ada fondos a su cuenta con una transferencia bancaria o tarjeta de cr\u00e9dito."}, "WEBMONEY": {"homepage": "http://www.wmtransfer.com/", "description": "Transacciones seguras e inmediatas online.", "name": "WebMoney"}, "BPAY": {"national": false, "homepage": "http://bpay.com.au/", "description": "Bpay permite a los australianos distintas formas de pagar sus cuentas.", "name": "Pago de recibos BPAY"}, "OTHER_REMITTANCE": {"national": true, "description": "La lista de proveedores de remesas ya no est\u00e1 en la lista. El anunciante ofrece los detalles del pago en el mensaje del anuncio", "name": "Otra remesa"}, "PAYONEER": {"homepage": "https://www.payoneer.com/", "name": "Payoneer", "description": "Payoneer es un servicio financiero que permite hacer transferencias de dinero en l\u00ednea y ofrece servicios de pago para comercios electr\u00f3nicos."}, "CASH": {"name": "Dinero en efectivo"}, "CASHIERS_CHECK": {"homepage": "https://en.wikipedia.org/wiki/Cashier%27s_check", "name": "Cheque de caja (cashier's check)", "description": "Cheques firmados por cajeros."}, "ONECARD": {"homepage": "https://www.onecard.net", "description": "Tarjeta de prepago comercializada en Arabia Saud\u00ed, Egipto y Kuwait.", "name": "OneCard"}, "SQUARE_CASH": {"homepage": "https://square.com/cash", "description": "Env\u00ede dinero a sus amigos usando una aplicaci\u00f3n de m\u00f3vil en EE. UU. Pueden cubrirse los fondos con tarjetas de d\u00e9bito.", "name": "Square Cash"}, "PAXUM": {"homepage": "https://www.paxum.com/", "name": "Paxum", "description": "Env\u00ede dinero a cualquier lugar del mundo con solo un correo electr\u00f3nico."}, "OTHER_PRE_PAID_DEBIT": {"national": true, "description": "Tarjetas de d\u00e9bito prepago que no tienen su propia categor\u00eda. El anunciante ofrece detalles de pago en la descripci\u00f3n del anuncio", "name": "Otras tarjetas de d\u00e9bito de prepago"}, "MPESA_TANZANIA": {"homepage": "http://www.vodacom.co.tz/mpesa", "name": "M-PESA Tanzania (Vodacom)", "description": "Env\u00ede y reciba dinero con su tel\u00e9fono m\u00f3vil en \u00c1frica."}, "CASH_AT_ATM": {"national": true, "name": "Efectivo en cajero autom\u00e1tico", "description": "\"En efectivo en cajero autom\u00e1tico\" es un servicio de algunos bancos que permite retirar/ingresar dinero de/en cajeros autom\u00e1ticos con un c\u00f3digo PIN."}, "CREDITCARD": {"national": false, "homepage": "https://en.wikipedia.org/wiki/Credit_card", "description": "Compre bitcoins usando su tarjeta de cr\u00e9dito.", "name": "Tarjeta de cr\u00e9dito"}, "LYDIA": {"national": false, "homepage": "https://lydia-app.com/en/", "description": "Forma de pago m\u00f3vil franc\u00e9s.", "name": "Lydia"}, "SWISH": {"national": false, "homepage": "https://www.getswish.se/", "description": "Enviar y recibir coronas suecas en y desde n\u00fameros de tel\u00e9fono m\u00f3viles.", "name": "Swish"}, "PAYSAFECARD": {"national": true, "homepage": "https://www.paysafecard.com/", "description": "Pagos online en Europa de forma segura, sin necesidad de cuenta bancaria. A\u00f1ade fondos a su cuenta mediante cupones canjeables.", "name": "PaySafeCard"}, "PAYPAL": {"homepage": "http://paypal.com", "description": "Transferir dinero a cualquier persona con un correo electr\u00f3nico.", "name": "Paypal"}, "WECHAT": {"homepage": "https://pay.weixin.qq.com/", "description": "WeChat Pay es un servicio de carteras digitales incorporado en WeChat que permite a los usuarios realizar pagos con dispositivos m\u00f3viles y enviar dinero.", "name": "WeChat"}, "PERFECT_MONEY": {"homepage": "https://perfectmoney.com/", "description": "Pagos instant\u00e1neos y transferencias confidenciales online.", "name": "Perfect Money"}, "RELOADIT": {"homepage": "https://www.reloadit.com/", "description": "Cupones canjeables y tarjetas de d\u00e9bito.", "name": "Reloadit"}, "OKPAY": {"homepage": "https://www.okpay.com/", "description": "OKPAY le permite aceptar transferencias bancarias, dinero en efectivo y monedas electr\u00f3nicas de forma f\u00e1cil y asequible. Actualmente OKPAY se anuncia como forma de pago irreversible.", "name": "OKPay"}, "SPECIFIC_BANK": {"national": true, "description": "Transferencias a y de otros clientes con su mismo banco.", "name": "Transferencias con un banco espec\u00edfico"}, "WALMART2WALMART": {"homepage": "http://www.walmart.com/cp/Online-Money-Transfers/1089406", "description": "Enviar y recibir dinero entre dos Walmarts. El receptor puede canjear la transferencia en dinero en efectivo.", "name": "Walmart 2 Walmart"}, "GIFT_CARD_CODE_WALMART": {"national": true, "description": "Un c\u00f3digo de tarjeta regalo.", "name": "C\u00f3digo de la tarjeta regalo de Walmart"}, "MPESA_KENYA": {"homepage": "http://www.safaricom.co.ke/", "description": "Env\u00ede y reciba dinero con su tel\u00e9fono m\u00f3vil en \u00c1frica.", "name": "M-PESA Kenya (Safaricom)"}, "EASYPAISA": {"national": false, "homepage": "https://easypaisa.com.pk/", "description": "Enviar dinero a otras personas en Pakist\u00e1n usando su tel\u00e9fono m\u00f3vil.", "name": "Easypaisa"}, "SERVE2SERVE": {"national": true, "homepage": "https://www.serve.com/", "description": "Tarjetas de d\u00e9bito recargables y transferencias entre ellas.", "name": "Serve2Serve"}, "WORLDREMIT": {"homepage": "https://www.worldremit.com", "name": "Worldremit", "description": "Env\u00ede dinero a cualquier lugar en el mundo."}, "ALTCOIN_ETH": {"national": false, "description": "Altcoins no es la misma criptomoneda que Bitcoin.", "name": "Ethereum altcoin"}, "OTHER": {"national": true, "description": "El anunciante proporciona los datos de pago en el mensaje del anuncio", "name": "Otra forma de pago online"}, "INTERAC": {"homepage": "http://www.interac.ca/en/", "description": "Transferencias online canadienses", "name": "Interac e-transfer"}, "GIFT_CARD_CODE_EBAY": {"national": true, "description": "Un c\u00f3digo de tarjeta regalo.", "name": "C\u00f3digo de la tarjeta regalo de Ebay"}, "CASHU": {"homepage": "https://www.cashu.com/", "description": "Pago seguro online sin necesidad de cuenta bancaria o tarjeta de cr\u00e9dito. A\u00f1ada fondos a su cuenta mediante varios m\u00e9todos.", "name": "CashU"}, "GIFT_CARD_CODE_STARBUCKS": {"national": true, "description": "Un c\u00f3digo de tarjeta regalo.", "name": "C\u00f3digo de la tarjeta regalo de Starbucks"}, "YANDEXMONEY": {"national": false, "homepage": "https://money.yandex.ru", "description": "Soluci\u00f3n de pago m\u00f3vil.", "name": "Yandex.Money"}, "HAL_CASH": {"homepage": "http://www.halcash.com/en/welcome/", "description": "Hal-Cash es un servicio bancario que le permite enviar dinero a cualquier tel\u00e9fono m\u00f3vil y retirarlo inmediatamente en un cajero autom\u00e1tico de cualquier instituci\u00f3n financiera del mundo asociada al sistema, a cualquier hora y en cualquier sitio, sin necesidad de una tarjeta de cr\u00e9dito.", "name": "Hal-cash"}},
+        countrySpecificPaymentForms: {"NATIONAL_BANK": ["AU", "FI", "GB"]},
+        recommendedPaymentMethods: {"RU": ["SPECIFIC_BANK", "QIWI", "NATIONAL_BANK", "CASH_DEPOSIT", "YANDEXMONEY"], "US": ["CASH_DEPOSIT", "GIFT_CARD_CODE_ITUNES", "NATIONAL_BANK", "CASH_BY_MAIL", "GOOGLEWALLET", "VANILLA", "PAYPALMYCASH", "XOOM", "VENMO", "DWOLLA", "NETSPEND", "POSTAL_ORDER", "CHASE_QUICKPAY", "CASHIERS_CHECK", "SQUARE_CASH", "PAYSAFECARD", "RELOADIT", "WALMART2WALMART", "GIFT_CARD_CODE_WALMART", "SERVE2SERVE"], "GB": ["NATIONAL_BANK", "CASH_DEPOSIT", "PAYPAL", "CASH_BY_MAIL", "SEPA", "PINGIT", "PYC", "POSTAL_ORDER", "PAYM", "PAYSAFECARD"], "NG": ["NATIONAL_BANK", "SPECIFIC_BANK", "PERFECT_MONEY", "CASH_DEPOSIT"], "CN": ["NATIONAL_BANK", "ALIPAY", "SPECIFIC_BANK", "WU", "WECHAT"], "VE": ["SPECIFIC_BANK", "NATIONAL_BANK", "PAYPAL", "WEBMONEY", "ASTROPAY"], "AU": ["CASH_DEPOSIT", "NATIONAL_BANK", "SPECIFIC_BANK", "CASH_BY_MAIL", "VANILLA", "XOOM", "BPAY", "PAYSAFECARD"], "BR": ["NATIONAL_BANK", "SPECIFIC_BANK", "CASH_DEPOSIT", "WU", "ASTROPAY"], "CO": ["SPECIFIC_BANK", "NATIONAL_BANK", "WU", "MONEYGRAM", "ASTROPAY"], "ZA": ["NATIONAL_BANK", "SPECIFIC_BANK", "OTHER", "CASH_DEPOSIT"], "IN": ["BANK_TRANSFER_IMPS", "NATIONAL_BANK", "PAYTM", "NETELLER", "XOOM"], "NO": ["NATIONAL_BANK", "SEPA", "INTERNATIONAL_WIRE_SWIFT", "PAYPAL", "VIPPS", "MOBILEPAY_DANSKE_BANK_NO", "PAYSAFECARD"], "SE": ["SWISH", "NATIONAL_BANK", "SEPA", "CASH_BY_MAIL", "PAYSAFECARD"], "MY": ["NATIONAL_BANK", "SPECIFIC_BANK", "PAYPAL", "ALTCOIN_ETH"], "HK": ["NATIONAL_BANK", "SPECIFIC_BANK", "CASH_DEPOSIT", "INTERNATIONAL_WIRE_SWIFT"], "NZ": ["SPECIFIC_BANK", "NATIONAL_BANK", "CASH_DEPOSIT", "PAYPAL"], "UA": ["SPECIFIC_BANK", "NATIONAL_BANK", "QIWI", "WEBMONEY", "YANDEXMONEY"], "TH": ["NATIONAL_BANK", "SPECIFIC_BANK", "CASH_DEPOSIT", "CASH_AT_ATM"], "PK": ["NATIONAL_BANK", "OTHER", "EASYPAISA", "SPECIFIC_BANK"], "CA": ["CASH_DEPOSIT", "INTERAC", "PAYPAL", "GIFT_CARD_CODE_ITUNES", "XOOM", "HYPERWALLET", "PAYSAFECARD"], "HR": ["SEPA", "NATIONAL_BANK", "CASH_DEPOSIT", "SPECIFIC_BANK", "TELEGRAMATIC_ORDER", "PAYSAFECARD"], "PA": ["SPECIFIC_BANK", "NATIONAL_BANK", "CASH_DEPOSIT", "OTHER"], "FI": ["SEPA", "NATIONAL_BANK", "GIFT_CARD_CODE_STEAM", "SPECIFIC_BANK", "MOBILEPAY_DANSKE_BANK", "PAYSAFECARD"], "ES": ["SPECIFIC_BANK", "CASH_DEPOSIT", "SEPA", "PAYPAL", "PAYSAFECARD", "HAL_CASH"], "KE": ["MPESA_KENYA", "INTERNATIONAL_WIRE_SWIFT", "SPECIFIC_BANK", "CASH_DEPOSIT"], "PT": ["SEPA", "NATIONAL_BANK", "PAYPAL", "SPECIFIC_BANK", "PAYSAFECARD"], "RO": ["NATIONAL_BANK", "SPECIFIC_BANK", "SEPA", "PAYONEER", "PAYSAFECARD"], "AE": ["NATIONAL_BANK", "CASH_DEPOSIT", "WU", "PAYEER"], "FR": ["SEPA", "PAYPAL", "WU", "MONEYGRAM", "LYDIA", "PAYSAFECARD"], "PE": ["SPECIFIC_BANK", "NATIONAL_BANK", "MONEYGRAM", "WU", "ASTROPAY"], "SG": ["NATIONAL_BANK", "INTERNATIONAL_WIRE_SWIFT", "CASH_DEPOSIT", "SPECIFIC_BANK"], "IT": ["PostePay", "SEPA", "PAYPAL", "PAYSAFECARD", "SUPERFLASH"], "MX": ["CASH_DEPOSIT", "NATIONAL_BANK", "OTHER", "PAYPAL", "PAYSAFECARD"], "CZ": ["SEPA", "SPECIFIC_BANK", "NATIONAL_BANK", "INTERNATIONAL_WIRE_SWIFT", "PAYSAFECARD"], "PL": ["OTHER", "SEPA", "NATIONAL_BANK", "SPECIFIC_BANK", "PAYSAFECARD", "HAL_CASH"], "SA": ["NATIONAL_BANK", "SPECIFIC_BANK", "PAYPAL", "CASHU", "ONECARD"], "TR": ["NATIONAL_BANK", "SPECIFIC_BANK", "WU", "GIFT_CARD_CODE_STEAM", "PAYSAFECARD"], "PH": ["CASH_DEPOSIT", "SPECIFIC_BANK", "WU", "GIFT_CARD_CODE_STEAM", "XOOM"], "AR": ["NATIONAL_BANK", "SPECIFIC_BANK", "CASH_DEPOSIT", "NETELLER", "ASTROPAY", "PAYSAFECARD"], "CL": ["NATIONAL_BANK", "CASH_DEPOSIT", "SPECIFIC_BANK", "NETELLER", "ASTROPAY"], "NL": ["SEPA", "PAYPAL", "WU", "MONEYBOOKERS", "PAYSAFECARD"], "SK": ["SEPA", "MONEYBOOKERS", "PAYPAL", "NATIONAL_BANK", "PAYSAFECARD"], "MA": ["CASH_DEPOSIT", "NATIONAL_BANK", "SPECIFIC_BANK", "OTHER_REMITTANCE"], "IE": ["SPECIFIC_BANK", "CASH_DEPOSIT", "NATIONAL_BANK", "SEPA", "PAYSAFECARD"]},
+        paymentMethodAjaxUrl: "/payment_method_ajax_list",
+        paymentMethodChoicesBuy: [{"methods": ["ASTROPAY", "CASH_BY_MAIL", "CASH_DEPOSIT", "MONEYBOOKERS", "NATIONAL_BANK", "NETELLER", "OTHER", "PAYPAL", "SPECIFIC_BANK", "WEBMONEY", "WU"], "name": "Popular en su pa\u00eds"}, {"methods": ["ALL_ONLINE", "CASH_DEPOSIT", "CREDITCARD", "MONEYGRAM", "NATIONAL_BANK", "OTHER", "OTHER_REMITTANCE", "PAYPAL", "RIA", "SPECIFIC_BANK", "WU"], "name": "Todos los m\u00e9todos de pago"}, {"methods": ["CASH"], "name": "En persona"}],
+        paymentMethodChoicesSell: [{"methods": ["ASTROPAY", "CASH_BY_MAIL", "CASH_DEPOSIT", "MONEYBOOKERS", "NATIONAL_BANK", "NETELLER", "OTHER", "PAYPAL", "SPECIFIC_BANK", "WEBMONEY", "WU"], "name": "Popular en su pa\u00eds"}, {"methods": ["ALL_ONLINE", "CASH_DEPOSIT", "CREDITCARD", "INTERNATIONAL_WIRE_SWIFT", "MONEYBOOKERS", "NATIONAL_BANK", "NETELLER", "OTHER", "PAYEER", "PAYONEER", "PAYPAL", "PAYZA", "SPECIFIC_BANK", "WU"], "name": "Todos los m\u00e9todos de pago"}, {"methods": ["CASH"], "name": "En persona"}],
+        searched: false
+    };
+</script>
+
+    </div>
+</div>
+</div>
+  
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
+ 
+  <button type="button" class="btn btn-primary">Primary</button>
   <p>You've pressed the button {{counter}} times.</p>
 </template>
 
