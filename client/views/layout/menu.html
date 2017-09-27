@@ -1,5 +1,7 @@
 <template name="menu">
-	  <div class="navbar-header">
+	<nav class="navbar navbar-fixed-top navbar-inverse" id="navbar-site">
+    <div class="container">
+       <div class="navbar-header">
         <a class="navbar-brand site-logo-img" href="https://localbitcoins.com/es/"><img src="./LocalBitcoins.com_files/site-logo.47b58f6f66c6.png" class="img-responsive"></a>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                <span class="sr-only">Toggle navigation</span>
@@ -11,8 +13,8 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="trades-elements"><a href="https://localbitcoins.com/es/comprar_bitcoins">Comprar bitcoins</a></li>
-          <li class="trades-elements"><a href="https://localbitcoins.com/es/vender_bitcoins">Vender bitcoins</a></li>
+          <li class="trades-elements"><a href="/comprar">Comprar bitcoins</a></li>
+          <li class="trades-elements"><a href="vender">Vender bitcoins</a></li>
           <li class="trades-elements"><a href="https://localbitcoins.com/advertise/">Colgar anuncio de intercambio</a></li>
 
           <li class="dropdown trades-dropdown" id="trades-ddl">
@@ -42,19 +44,15 @@
           </li>
         </ul>
         <!-- Right side of navbar -->
-        
-          
           <ul class="nav navbar-nav navbar-right">
-          <li><a id="top-register-link" class="register-link" href="https://localbitcoins.com/register/"><span><i class="fa fa-check-square-o"></i>
-          
-          Registro
-          
+          <li><a id="top-register-link" class="register-link" href="https://localbitcoins.com/register/"><span><i class="fa fa-check-square-o"></i>          
+          Registro          
           </span></a></li>
           <li> <a id="top-login-link" href="https://localbitcoins.com/accounts/login/"><i class="fa fa-user"></i>
           iniciar sesión
           </a></li>
-          
-        </ul>
-        
+        </ul>        
       </div>
+    </div>
+  </nav>
 </template>
